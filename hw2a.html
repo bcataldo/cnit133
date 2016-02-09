@@ -10,14 +10,47 @@
 	<meta name="author" content="Beth Cataldo">
 	<link rel="icon" href="images/favicon.ico">
 
-	<title>Assignment 2: Basic Operations, Example 1</title>
+	<title>Assignment 2: Basic Operations, Part 1</title>
 
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
 	<!-- Custom styles for this template -->
 	<link href="css/jumbotron-narrow.css" rel="stylesheet">
-	
+
+	<style>
+		/**set different displays of styles in CSS**/
+		
+		.jumbotron p {
+			margin-bottom: 15px;
+			font-size: 14px;
+			font-weight: 200;
+		}
+		
+		p {
+			display: inline-block;
+		}
+		
+		p.first {
+			font-family: "Times New Roman";
+			font-weight: bold;
+			color: red;
+		}
+		
+		p.second {
+			font-family: "Arial";
+			font-weight: bold;
+			color: blue;
+		}
+		
+		p.third {
+			font-family: "Impact";
+			color: green;
+			font-weight: bold;
+			font-style: italic;
+		}
+	</style>
+
 </head>
 
 <body>
@@ -40,14 +73,16 @@
 		</header>
 
 		<section class="jumbotron">
-			<h2>Homework #2: Basic Operations</h2>
-
-			<h3>Part 1: <a href="hw2a.html">Display Text</a></h3>
-			<h3>Part 2: <a href="hw2b.html">Input and Display Numbers</a></h3>
-			<h3>Part 3: <a href="hw2c.html">Input and Count Numbers</a></h3>
-			<h3>Part 4: <a href="hw2d.html">Calculate Squares and Cubes</a></h3>
-			<h3>Extra Credit: <a href="hw2extra.html">Calculate Monetary Exchange</a></h3>
-
+			<h2>Homework #2: Basic Operations </h2>
+			<h3>Part 1: Display Text</h3>
+			<p class="text-left">Create a webpage that contains a script that displays in pairs and strong (bold), the letters ab and the numbers 12 and 34 on the same line, with each pair of characters separated by one space. Write the script using document.write statements. Use a font family of Times New Roman and the color red for the letters ab, a font family of Arial and the color blue for the the numbers 12 and a font family of Impact, the color green, and emphasized (in italics) for the numbers 34.
+				<script>
+					//write CSS for each style of text
+					//apply classes for each different style
+					document.write("<p class='first'>ab</p> ")
+					document.write("<p class='second'>12</p> ")
+					document.write("<p class='third'>34</p>")
+				</script>
 		</section>
 
 	</div>

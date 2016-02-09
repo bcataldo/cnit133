@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Homework for the CNIT 133 Spring 2015 class">
+	<meta name="author" content="Beth Cataldo">
+	<link rel="icon" href="images/favicon.ico">
+
+	<title>Assignment 2: Basic Operations, Example 1</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Custom styles for this template -->
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+	<style>
+	.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 200;
+}
+	</style>
+	<script>
+		//create and initialize variables
+		var in1, in2, in3, sumIn, avgIn, proI, underSixCount = 0,
+			overSixCount = 0;
+
+
+		function process() {
+			//input the values from form text boxes using getElementById 	
+
+			in1 = document.getElementById("int1").value;
+
+			in2 = document.getElementById("int2").value;
+
+			in3 = document.getElementById("int3").value;
+
+
+			//convert numbers from strings to integers
+			n1 = parseInt(in1);
+			n2 = parseInt(in2);
+			n3 = parseInt(in3);
+
+
+			//make the calculations, including sum, average and product 	
+
+			sumIn = n1 + n2 + n3;
+			avgIn = (sumIn / 3);
+			proIn = n1 * n2 * n3;
+
+			//Display the Numbers that were typed in
+			//Display the Sum, Average and Product results
+			document.getElementById("results").value =
+				("The inputted numbers were " + n1 + ", " + n2 + ", " + n3 +
+					"\nThe smallest integer was " + Math.min(n1, n2, n3) +
+					"\nThe largest integer was " + Math.max(n1, n2, n3) +
+					"\nThe product of the integers was " + proIn +
+					"\nThe average of the integers was " + avgIn +
+					"\nThe sum of the integers was " + sumIn)
+		}
+	</script>
+</head>
+
+<body>
+
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation" class="active"><a href="index.html">Beth Cataldo</a></li>
+					<li role="presentation"><a href="index.html">HW #1</a></li>
+					<li role="presentation" class="active"><a href="hw2.html">HW #2</a></li>
+					<li role="presentation"><a href="hw3.html">HW #3</a></li>
+					<li role="presentation"><a href="hw4.html">HW #4</a></li>
+					<li role="presentation"><a href="hw5.html">HW #5</a></li>
+					<li role="presentation"><a href="hw6.html">HW #6</a></li>
+					<li role="presentation"><a href="hw7.html">HW #7</a></li>
+					<li role="presentation"><a href="hw8.html">HW #8</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="jumbotron">
+			<h2>Homework #2: Basic Operations</h2>
+			<h3>Part 2: Input and Display Numbers</h3>
+			<p class="text-left">Create a webpage that contains a script that inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers. Your results should be displayed using alerts or a form textarea or a div element.</p>
+
+			<form id="myform" name="myform">
+				Type in a Number:
+				<p>
+					<input type="text" id="int1" size="10" autofocus>
+				</p>
+				Type in Another Number:
+				<p>
+					<input type="text" id="int2" size="10">
+				</p>
+				Type in One More Number:
+				<p>
+					<input type="text" id="int3" size="10">
+				</p>
+
+				<p>
+					<textarea id="results" cols="50" rows="10"></textarea>
+				</p>
+				<p>
+					<input type="button" value="Calculate" onclick="process()">
+					<input type="reset" value="Reset" size="10">
+				</p>
+			</form>
+		</section>
+
+	</div>
+	<!-- /container -->
+
+</body>
+
+</html>

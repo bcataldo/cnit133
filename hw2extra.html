@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Homework for the CNIT 133 Spring 2015 class">
+	<meta name="author" content="Beth Cataldo">
+	<link rel="icon" href="images/favicon.ico">
+
+	<title>Assignment 2: Basic Operations, Extra Credit</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Link to JQuery Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<!-- Custom styles for this template -->
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+	<style>
+		.jumbotron p {
+			margin-bottom: 15px;
+			font-size: 14px;
+			font-weight: 200;
+		}
+		
+		#panel,
+		#flip {
+			padding: 5px;
+			text-align: center;
+			background-color: #c0c0c0;
+			width: 50%;
+			border: solid 1px #c3c3c3;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		
+		#panel {
+			padding: 10px;
+			width: 50%;
+			display: none;
+		}
+		
+		table {
+			
+			width: 400px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: left;
+			border: 1px solid black;
+		}
+		
+		table td {
+			text-align: right;
+			padding: 7px;
+
+		}
+		
+	table input {
+			text-align: right;
+		}
+		
+		table th {
+			text-align: center;
+			padding: 10px;
+
+		}
+		.left {
+			text-align: left;
+		}
+		.bold {
+			font-weight: bold;
+		}
+		
+		.bump-space {
+			padding-top: 15px;
+		}
+	</style>
+
+	<script>
+		$(document).ready(function () {
+			$("#flip").click(function () {
+				$("#panel").slideToggle("slow");
+			});
+		});
+	</script>
+	
+<script>
+	$(document).ready(function() {
+	$('#usdollar').focus(function() {
+		$(this).css('background-color','#BDFCC9');
+	});
+		});
+</script>
+
+
+
+	<script>
+		function process() {
+			//create and initialize variables
+			var usDollar, us, bp, cd, eu, jy, mp;
+
+			//input the US Dollar amount from form text box using getElementById 	
+
+			usDollar = document.getElementById("usdollar").value;
+
+
+			//convert numbers from strings to integers
+
+			us = parseInt(usDollar);
+
+			//multiply to get conversion
+
+
+			bp = (0.62998 * us).toFixed(2);
+			cd = (1.22700 * us).toFixed(2);
+			eu = (0.88052 * us).toFixed(2);
+			jy = (102.7000 * us).toFixed(2);
+			mp = (15.3477 * us).toFixed(2);
+
+
+			//note: how to round decimals var n = num.toFixed();
+
+
+			//Display the conversion to other country values
+			document.getElementById("bp").value = bp;
+			document.getElementById("cd").value = cd;
+			document.getElementById("eu").value = eu;
+			document.getElementById("jy").value = jy;
+			document.getElementById("mp").value = mp;
+		}
+	</script>
+</head>
+
+<body>
+
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation" class="active"><a href="index.html">Beth Cataldo</a></li>
+					<li role="presentation"><a href="index.html">HW #1</a></li>
+					<li role="presentation" class="active"><a href="hw2.html">HW #2</a></li>
+					<li role="presentation"><a href="hw3.html">HW #3</a></li>
+					<li role="presentation"><a href="hw4.html">HW #4</a></li>
+					<li role="presentation"><a href="hw5.html">HW #5</a></li>
+					<li role="presentation"><a href="hw6.html">HW #6</a></li>
+					<li role="presentation"><a href="hw7.html">HW #7</a></li>
+					<li role="presentation"><a href="hw8.html">HW #8</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="jumbotron">
+			<h2>Homework #2: Basic Operations</h2>
+			<h3>Extra Credit: Calculate Monetary Exchange</h3>
+
+			
+
+
+			<form id="myform" name="myform">
+			<!--Use JQuery to show/hide instructions-->
+				<div id="flip">Click to Show/Hide Instructions</div>
+				<div id="panel">The foreign exchange rates on June 20, 2015.
+					<br /> Enter a dollar amount in the table below to see the corresponding foreign exchange values.
+					<br />
+				</div>
+
+				<!--Add table to arrange info clearly-->
+				<table>
+					<tr>
+						<th colspan="3">Monetary Exchange Rates
+						</th>
+					</tr>
+					<tr>
+				
+						<th class="left">Currency</th>
+						<th>Rate</th>
+						<th>Value</th>
+					</tr>
+					<tr>
+						<td class="left">British Pound</td>
+						<td>0.62998</td>
+						<td>
+							<input type="text" id="bp" size="15">
+						</td>
+					</tr>
+					<tr>
+						<td class="left">Canadian Dollar</td>
+						<td >1.22700</td>
+						<td>
+							<input type="text" id="cd" size="15">
+						</td>
+					</tr>
+					<tr>
+						<td class="left">Euro</td>
+						<td>0.88052</td>
+						<td>
+							<input type="text" id="eu" size="15">
+						</td>
+					</tr>
+					<tr>
+						<td class="left">Japanese Yen</td>
+						<td>102.700</td>
+						<td>
+							<input type="text" id="jy" size="15">
+						</td>
+					</tr>
+					<tr>
+						<td class="left">Mexican Peso</td>
+						<td>15.3477</td>
+						<td>
+							<input type="text" id="mp" size="15">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="bold left">Enter Amount of US Dollars</td>
+						<td>
+							<input type="text" id="usdollar" size="10" autofocus>
+						</td>
+					</tr>
+
+				</table>
+
+<!-- 			Add buttons to calculate or reset values
+			 -->				<p class="bump-space">
+					<input type="button" value="Calculate" onclick="process()">
+					<input type="reset" value="Reset" size="10">
+				</p>
+			</form>
+		</section>
+
+	</div>
+	<!-- /container -->
+
+</body>
+
+</html>
