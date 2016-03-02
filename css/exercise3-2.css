@@ -1,0 +1,42 @@
+		.jumbotron p {
+			margin-bottom: 15px;
+			font-size: 14px;
+			font-weight: 200;
+		}
+		
+		
+		
+		table {
+			
+			width: 400px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: left;
+			border: 1px solid black;
+		}
+		
+		table td {
+			text-align: right;
+			padding: 7px;
+
+		}
+		
+	table input {
+			text-align: right;
+		}
+		
+		table th {
+			text-align: center;
+			padding: 10px;
+
+		}
+		.left {
+			text-align: left;
+		}
+		.bold {
+			font-weight: bold;
+		}
+		
+		.bump-space {
+			padding-top: 15px;
+		}

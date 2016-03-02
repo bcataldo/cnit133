@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Homework for the CNIT 133 Spring 2016 class">
+	<meta name="author" content="Beth Cataldo">
+	<link rel="icon" href="images/favicon.ico">
+
+	<title>Assignment 3, Part 3: Palindromes</title>
+
+	<!-- Link to JQuery Styles -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+	<!-- Link to JQuery UI and codes -->
+
+	<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+	<!-- Link to JQuery Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+
+	<!-- Custom styles for this page/exercise -->
+	<link href="css/exercise3d.css" rel="stylesheet">
+
+
+	<!-- Link to local Javascript file with palindrome exercise -->
+	<script src="js/assign3-pt3d.js"></script>
+
+	<!-- This link needs to be here for the tool tip to work -->
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<!-- This link needs to be here for the validation work -->
+	<script src="js/validate-jq.js"></script>
+
+
+</head>
+
+<body>
+
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation" class="active"><a href="index.html">Beth Cataldo</a></li>
+					<li role="presentation"><a href="index.html">HW #1</a></li>
+					<li role="presentation"><a href="hw2.html">HW #2</a></li>
+					<li role="presentation" class="active"><a href="hw3.html">HW #3</a></li>
+					<li role="presentation"><a href="hw4.html">HW #4</a></li>
+					<li role="presentation"><a href="hw5.html">HW #5</a></li>
+					<li role="presentation"><a href="hw6.html">HW #6</a></li>
+					<li role="presentation"><a href="hw7.html">HW #7</a></li>
+					<li role="presentation"><a href="hw8.html">HW #8</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<section class="jumbotron">
+			<h2>Homework #3: Functions</h2>
+			<h3>Part 4: Is it a Palindrome?</h3>
+
+<p class="bump-space"></p>
+			<button id="opener">Click for instructions</button>
+
+			<div id="dialog" title="Instructions">
+				<p>Input a five-digit integer (not starting with zero) to display if it is a palindrome, not a palindrome, or an input error.
+				</p>
+			</div>
+
+			<form id="myform" name="myform">
+
+				<p class="bold">
+					Input a five-digit number<br /> (not starting with zero):
+				</p>
+				<input id="palindrome" name="palindrome" size="23">
+
+				<p class="bump-space">
+					<input type="button" onclick="check()" value="SUBMIT">
+					<input type="reset" value="RESET" onClick="window.location.reload();">
+					<p class="bump-space"></p>
+
+
+
+			</form>
+		</section>
+
+	</div>
+</body>
+
+</html>

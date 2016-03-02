@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Homework for the CNIT 133 Spring 2016 class">
+	<meta name="author" content="Beth Cataldo">
+	<link rel="icon" href="images/favicon.ico">
+
+
+	<title>Assignment 3, Part 6: Multiplication Practice</title>
+
+	<!-- Link to JQuery Styles -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+	<!-- Link to JQuery UI and codes -->
+
+	<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+	<!-- Link to JQuery Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+
+	<!-- Custom styles for this page/exercise -->
+	<link href="css/exercise3f.css" rel="stylesheet">
+
+
+	<!-- Link to local Javascript file with palindrome exercise -->
+	<script src="js/assign3-pt3f.js"></script>
+
+	<!-- This link needs to be here for the jquery to work -->
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<!-- This link needs to be here for the validation work -->
+	<script src="js/validate-jq.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation" class="active"><a href="index.html">Beth Cataldo</a></li>
+					<li role="presentation"><a href="index.html">HW #1</a></li>
+					<li role="presentation"><a href="hw2.html">HW #2</a></li>
+					<li role="presentation" class="active"><a href="hw3.html">HW #3</a></li>
+					<li role="presentation"><a href="hw4.html">HW #4</a></li>
+					<li role="presentation"><a href="hw5.html">HW #5</a></li>
+					<li role="presentation"><a href="hw6.html">HW #6</a></li>
+					<li role="presentation"><a href="hw7.html">HW #7</a></li>
+					<li role="presentation"><a href="hw8.html">HW #8</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="jumbotron">
+			<h2>Homework #3: Functions</h2>
+			<h3>Part 5: Multiplication Practice</h3>
+
+
+
+			<form id="myform" name="myform">
+				<p class="bump-space"></p>
+					Let's produce two random numbers for you to multiply:
+					<p>
+
+						<input type="button" class="button" value="Generate two random numbers" onclick="generateNum()">
+					</p>
+
+					<!-- These are the questions in order: multiplication, answer is correct, answer is incorrect -->
+				
+
+					<p id="output1"></p>
+					<p id="outputyes"></p>
+					<p id="outputno"></p>
+
+					<p id="demo"></p>
+					<div id="yes_no" class="none">
+					<input type="button" value="Yes - Generate new numbers" onclick="generateNum()">
+					<input type="button" value="No" onclick="alert('Thank you and goodbye')">
+				</div>
+
+
+				<p>
+					<br /> Input your answer here:</p>
+					<input type="text" id="check" name="check">
+					
+					<input type="button" value="Check my answer" onclick="checkAns()">
+
+				<p class="bump-space"></p>
+					<!-- <p>Correct Answer:<br /></p>
+					<p id="ansCor">
+					</p>
+
+				<p>Your Answer:</p><p id="ansIn"></p> -->
+				
+						<input type="reset" value="Reset" size="10">
+							
+
+
+
+
+			</form>
+		</section>
+
+	</div>
+
+</body>
+
+</html>

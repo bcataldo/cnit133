@@ -1,0 +1,58 @@
+		.jumbotron p {
+			margin-bottom: 15px;
+			font-size: 14px;
+			font-weight: 200;
+		}
+		
+		#panel,
+		#flip {
+			padding: 5px;
+			text-align: center;
+			background-color: #c0c0c0;
+			width: 50%;
+			border: solid 1px #c3c3c3;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		
+		#panel {
+			padding: 10px;
+			width: 50%;
+			display: none;
+			text-align: left;
+		}
+		
+		table {
+			
+			width: 200px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: left;
+			border: 1px solid black;
+		}
+		
+		table td {
+			text-align: right;
+			padding: 7px;
+
+		}
+		
+	table input {
+			text-align: right;
+		}
+		
+		table th {
+			text-align: center;
+			padding: 10px;
+
+		}
+		.left {
+			text-align: left;
+		}
+		.bold {
+			font-weight: bold;
+		}
+		
+		.bump-space {
+			padding-top: 15px;
+		}

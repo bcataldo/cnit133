@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Homework for the CNIT 133 Spring 2016 class">
+	<meta name="author" content="Beth Cataldo">
+	<link rel="icon" href="images/favicon.ico">
+
+	<title>Assignment 3, Part 2: Sales Commissions</title>
+
+	<!-- Link to JQuery Styles -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+	<!-- Link to JQuery UI and codes -->
+
+	<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+	<!-- Link to JQuery Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!-- Link to local Javascript file -->
+	<script src="js/assign3-pt3b.js"></script>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+	<link href="css/exercise3b.css" rel="stylesheet">
+
+
+	<!-- This link needs to be here for the tool tip to work -->
+
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	
+	<!-- This link needs to be here for the validation work -->
+
+	<script src="js/validate-jq.js"></script>
+
+	<script>
+		/* JQuery for tool tip */
+		$(function () {
+			$(document).tooltip();
+		});
+	</script>
+
+	
+
+
+</head>
+
+<body>
+
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation" class="active"><a href="index.html">Beth Cataldo</a></li>
+					<li role="presentation"><a href="index.html">HW #1</a></li>
+					<li role="presentation"><a href="hw2.html">HW #2</a></li>
+					<li role="presentation" class="active"><a href="hw3.html">HW #3</a></li>
+					<li role="presentation"><a href="hw4.html">HW #4</a></li>
+					<li role="presentation"><a href="hw5.html">HW #5</a></li>
+					<li role="presentation"><a href="hw6.html">HW #6</a></li>
+					<li role="presentation"><a href="hw7.html">HW #7</a></li>
+					<li role="presentation"><a href="hw8.html">HW #8</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<section class="jumbotron">
+			<h2>Homework #3: Functions</h2>
+			<h3>Part 2: Sales Commissions</h3>
+
+
+
+
+			<form id="myform" name="myform">
+
+				<table>
+
+					<tr>
+						<td colspan="2">
+							<!--Use JQuery to provide tips on hover-->
+
+							<label for="Salesperson">Salesperson:</label>
+							<input id="salesName" name="Name" title="Please make sure that the salesperson's name is spelled correctly." size="25"  class="left">
+						</td>
+
+
+
+					</tr>
+					<tr>
+						<td colspan="2">
+							Input the number of each item sold:
+						</td>
+					</tr>
+					<tr>
+
+
+						<td class="column-width">Item 1: </td>
+						<td>
+							<input type="text" id="itemOne" name="itemOne" size="10">
+						</td>
+
+					</tr>
+					<tr>
+
+
+						<td>Item 2: </td>
+						<td>
+							<input type="text" id="itemTwo" name="itemTwo" size="10">
+						</td>
+
+					</tr>
+					<tr>
+
+
+						<td>Item 3: </td>
+						<td>
+							<input type="text" id="itemThree" name="itemThree" size="10">
+						</td>
+
+					</tr>
+					<tr>
+
+
+						<td>Item 4: </td>
+						<td>
+							<input type="text" id="itemFour" name="itemFour" size="10">
+						</td>
+
+					</tr>
+
+				</table>
+				<p class="bump-space"></p>
+				<input type="button" onclick="getSales()" onblur="window.location.reload()" value="SUBMIT">
+				<input type="reset" value="RESET" onClick="window.location.reload();">
+				<p  class="bump-space"></p>
+				<table>
+					<tr>
+						<th class="column-width"></th>
+						<th></th>
+						<th>Number</th>
+						<th></th>
+					</tr>
+					<tr>
+						<th>Item&nbsp;#</th>
+						<th>Price</th>
+						<th>Sold</th>
+						<th class="left">Total</th>
+					</tr>
+
+					<tr>
+						<td class="center">1</td>
+						<td>$239.99</td>
+						<td>
+							<input type="text" id="numsoldOne" size="4">
+						</td>
+						<td>
+							<input type="text" id="totalOne" size="15">
+						</td>
+
+					</tr>
+
+					<tr>
+						<td class="center">2</td>
+						<td>$129.75</td>
+						<td>
+							<input type="text" id="numsoldTwo" size="4">
+						</td>
+						<td>
+							<input type="text" id="totalTwo" size="15">
+						</td>
+
+					</tr>
+					<tr>
+						<td class="center">3</td>
+						<td>$99.95</td>
+						<td>
+							<input type="text" id="numsoldThree" size="4">
+						</td>
+						<td>
+							<input type="text" id="totalThree" size="15">
+						</td>
+
+					</tr>
+					<tr>
+						<td class="center">4</td>
+						<td>$350.89</td>
+						<td>
+							<input type="text" id="numsoldFour" size="4">
+						</td>
+						<td>
+							<input type="text" id="totalFour" size="15">
+						</td>
+
+					</tr>
+					<tr>
+						<td colspan="3" class="right bold">Total Amount Sold</td>
+						<td>
+							<input type="text" id="totalSold" size="4">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" class="right bold">Total Weekly Earnings</td>
+
+						<td class="left">
+							<input type="text" id="totalWeekly" size="20">
+						</td>
+
+					</tr>
+				</table>
+
+
+			</form>
+
+		</section>
+
+	</div>
+</body>
+
+</html>

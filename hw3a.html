@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Homework for the CNIT 133 Spring 2015 class">
+	<meta name="author" content="Beth Cataldo">
+	<link rel="icon" href="images/favicon.ico">
+
+	<title>Assignment 3, Part 1: Student Grade Calculations</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="js/assign3-pt1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<!-- Link to JQuery Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+	<link href="css/exercise3-1.css" rel="stylesheet">
+	
+<script>
+		$(document).ready(function () {
+			$("#flip").click(function () {
+				$("#panel").slideToggle("slow");
+			});
+		});
+</script>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation" class="active"><a href="index.html">Beth Cataldo</a></li>
+					<li role="presentation"><a href="index.html">HW #1</a></li>
+					<li role="presentation"><a href="hw2.html">HW #2</a></li>
+					<li role="presentation"  class="active"><a href="hw3.html">HW #3</a></li>
+					<li role="presentation"><a href="hw4.html">HW #4</a></li>
+					<li role="presentation"><a href="hw5.html">HW #5</a></li>
+					<li role="presentation"><a href="hw6.html">HW #6</a></li>
+					<li role="presentation"><a href="hw7.html">HW #7</a></li>
+					<li role="presentation"><a href="hw8.html">HW #8</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<section class="jumbotron">
+			<h2>Homework #1: Functions</h2>
+			<h3>Part 1: Student Grades</h3>
+			<!--Use JQuery to show/hide instructions-->
+			<div id="flip">Click to Show/Hide Instructions</div>
+			<div id="panel">
+				<br /> The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers). 
+It then calculates the student's final average according to the formula: final average = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * ACR).
+				<br />
+			</div>
+
+
+			<form name="myform">
+
+				<table>
+
+					<tr>
+						<td>Homework Average:</td>
+						<td>
+							<input type="text" id="hwAvg" size="4">
+						</td>
+
+					</tr>
+
+					<tr>
+
+
+						<td>Mid-term Exam: </td>
+						<td>
+							<input type="text" id="midExam" size="4">
+						</td>
+
+					</tr>
+
+					<tr>
+						<td>Final Exam: </td>
+						<td>
+							<input type="text" id="finalExam" size="4">
+						</td>
+
+					</tr>
+
+					<tr>
+						<td>ACR: </td>
+						<td>
+							<input type="text" id="ACR" size="4">
+						</td>
+
+					</tr>
+					<tr>
+						<td>Final Average:</td>
+						<td>
+							<input type="text" ID="results" size="4">
+						</td>
+					</tr>
+
+					<tr>
+						<td>Final Grade:</td>
+						<td>
+							<input type="text" ID="summary" size="4">
+						</td>
+					</tr>
+				</table>
+
+				<br>
+
+				<div id="errOut"></div>
+
+				<br>
+
+				<input type="button" onclick="process()" onblur="window.location.reload()" value="SUBMIT">
+				<input type="reset" value="RESET" onClick="window.location.reload();">
+				<br>
+				<br>
+
+			</form>
+
+		</section>
+
+	</div>
+</body>
+
+</html>
