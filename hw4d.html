@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Homework for the CNIT 133 Spring 2016 class">
+	<meta name="author" content="Beth Cataldo">
+	<link rel="icon" href="images/favicon.ico">
+
+	<title>Assignment 4, Part 4: Mail Order Business</title>
+
+	<!-- Link to JQuery Styles -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+	<!-- Link to JQuery UI and codes -->
+
+	<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+	<!-- Link to JQuery Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!-- Link to local Javascript file -->
+
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+	<link href="css/exercise4d.css" rel="stylesheet">
+
+
+	<!-- This link needs to be here for the tool tip to work -->
+
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<!-- This link needs to be here for the validation work -->
+
+
+
+
+</head>
+
+<body>
+
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation" class="active"><a href="index.html">Beth Cataldo</a></li>
+					<li role="presentation"><a href="index.html">HW #1</a></li>
+					<li role="presentation"><a href="hw2.html">HW #2</a></li>
+					<li role="presentation"><a href="hw3.html">HW #3</a></li>
+					<li role="presentation" class="active"><a href="hw4.html">HW #4</a></li>
+					<li role="presentation"><a href="hw5.html">HW #5</a></li>
+					<li role="presentation"><a href="hw6.html">HW #6</a></li>
+					<li role="presentation"><a href="hw7.html">HW #7</a></li>
+					<li role="presentation"><a href="hw8.html">HW #8</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<section class="jumbotron">
+			<h2>Homework #4: Looping and Switch Statements</h2>
+			<h3>Part 4: Mail Order Information</h3>
+			<!--Use JQuery to show/hide instructions-->
+			<div id="flip" class="bump-space">Click to Show/Hide Instructions</div>
+			<div id="panel">
+				<br />A mail-order house sells five different products whose retail prices are as follows: product 1, $2.98, product 2, $4.50, product 3, $9.98, product 4, $4.49, product 5, $6.87. Create a webpage that contains a script that inputs the following:
+				<br/>
+				<br /> a) Product number (1 through 5)
+				<br /> b) Quantity sold for that product - (for the week)
+				<br />
+				<br /> Your script should use a switch statement to help determine the retail price for each product and should calculate and display the retail amount for each product and the total retail amount of all the products sold last week. Use form input boxes to obtain the product numbers (hard coded as 1-5) and the quantity sold for each product from the user.
+				<br />
+				<br />
+			</div>
+
+			<!-- create form for input of quantity sold -->
+
+			<form id="myform" name="myform" class="bump-space">
+
+				<table>
+					<tr>
+						<th>Product #</th>
+						<th>Qty </th>
+						<th>Price</th>
+						<th>Amount</th>
+					</tr>
+
+					<tr>
+
+						<td>
+							<input type="text" id="prod1" name="prod1" size="15" class="center" value="1">
+						</td>
+
+						<td>
+							<input type="text" id="qty1" name="qty1" size="15" class="right">
+						</td>
+						<td>$2.98</td>
+
+						<td>
+							<input type="text" id="totalNum1" name="totalNum1" size="15" class="right">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" id="prod2" name="prod2" size="15" class="center" value="2">
+						</td>
+						<td>
+							<input type="text" id="qty2" name="qty2" size="15" class="right">
+						</td>
+						<td>$4.50</td>
+						<td>
+							<input type="text" id="totalNum2" name="totalNum2" size="15" class="right">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" id="prod3" name="prod3" size="15" class="center" value="3">
+						</td>
+						<td>
+							<input type="text" id="qty3" name="qty3" size="15" class="right">
+						</td>
+						<td>$9.98</td>
+						<td>
+							<input type="text" id="totalNum3" name="totalNum3" size="15" class="right">
+						</td>
+					</tr>
+					<tr>
+
+
+						<td>
+							<input type="text" id="prod4" name="prod4" size="15" class="center" value="4">
+						</td>
+						<td>
+							<input type="text" id="qty4" name="qty4" size="15" class="right">
+						</td>
+						<td>$4.49</td>
+
+						<td>
+							<input type="text" id="totalNum4" name="totalNum4" size="15" class="right">
+						</td>
+					</tr>
+
+					<tr>
+
+
+						<td>
+							<input type="text" id="prod5" name="prod5" size="15" class="center" value="5">
+						</td>
+						<td>
+							<input type="text" id="qty5" name="qty5" size="15" class="right">
+						</td>
+						<td>$6.87</td>
+
+						<td>
+							<input type="text" id="totalNum5" name="totalNum5" size="15" class="right">
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" class="bold right">Total Amount Sold</td>
+						<td>
+							<input type="text" id="totalSold" name="totalSold" size="15" class="right">
+						</td>
+					</tr>
+				</table>
+
+				<p class="bump-space"></p>
+				<input type="button" onclick="calculateAmount()" value="Calculate Total Sold">
+				<input type="reset" value="Clear Form" onClick="window.location.reload();">
+				<p class="bump-space"></p>
+
+
+
+
+			</form>
+
+		</section>
+
+	</div>
+	<script src="js/assign4-pt4.js"></script>
+	<script src="js/validate-jq.js"></script>
+
+</body>
+
+</html>

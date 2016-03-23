@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Homework for the CNIT 133 Spring 2016 class">
+	<meta name="author" content="Beth Cataldo">
+	<link rel="icon" href="images/favicon.ico">
+
+	<title>Assignment 4, Part 2: Calculate Salary</title>
+
+	<!-- Link to JQuery Styles -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+	<!-- Link to JQuery UI and codes -->
+
+	<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+	<!-- Link to JQuery Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!-- Link to local Javascript file -->
+
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+	<link href="css/exercise4b.css" rel="stylesheet">
+
+
+	<!-- This link needs to be here for the tool tip to work -->
+
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<!-- This link needs to be here for the validation work -->
+
+
+
+
+</head>
+
+<body>
+
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation" class="active"><a href="index.html">Beth Cataldo</a></li>
+					<li role="presentation"><a href="index.html">HW #1</a></li>
+					<li role="presentation"><a href="hw2.html">HW #2</a></li>
+					<li role="presentation"><a href="hw3.html">HW #3</a></li>
+					<li role="presentation" class="active"><a href="hw4.html">HW #4</a></li>
+					<li role="presentation"><a href="hw5.html">HW #5</a></li>
+					<li role="presentation"><a href="hw6.html">HW #6</a></li>
+					<li role="presentation"><a href="hw7.html">HW #7</a></li>
+					<li role="presentation"><a href="hw8.html">HW #8</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<section class="jumbotron">
+			<h2>Homework #4: Looping Statements</h2>
+			<h3>Part 2: Gross Pay</h3>
+<div id="flip">Click to Show/Hide Instructions</div>
+			<div id="panel">
+				<br />Create a webpage that contains a script that will determine the gross pay for each of six employees. The company pays "straight time" for the first 40 hours worked by each employee and pays "time and a half" for all hours worked in excess of 40 hours. 
+				<br />	You are given a list of the employees of the company, the number of hours worked last week and the hourly rate of each employee. Your script should input this information for each employee, determine the employee's gross pay and then displays the employee's gross pay. 
+					<br />Be sure to round the outputted results to 2 decimal places. You should also check for valid input and right-justify all amounts. Use form text boxes to input the data.
+				<br />
+			</div>
+			
+			<form id="myform" name="myform" class="bump-space">
+
+				<table>
+					<tr>
+						<th>Employee</th>
+						<th>Hours Worked</th>
+						<th>Hourly Rate</th>
+					</tr>
+					<tr>
+						<td>
+							<label for="Employee1">Employee 1:</label>
+						</td>
+						<td>
+							<input type="text" id="hours" name="hours" size="15" class="right">
+						</td>
+						<td>
+							<input type="text" id="rate" name="rate" size="15" class="right">
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="Employee2">Employee 2:</label>
+						</td>
+						<td>
+							<input type="text" id="hours1" name="hours" size="15" class="right">
+						</td>
+						<td>
+							<input type="text" id="rate1" name="rate" size="15" class="right">
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="Employee3">Employee 3:</label>
+						</td>
+						<td>
+							<input id="hours2" name="hours" size="15" class="right">
+						</td>
+						<td>
+							<input id="rate2" name="rate" size="15" class="right">
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="Employee4">Employee 4:</label>
+						</td>
+						<td>
+							<input id="hours3" name="hours" size="15" class="right">
+						</td>
+						<td>
+							<input id="rate3" name="rate" size="15" class="right">
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="Employee5">Employee 5:</label>
+						</td>
+						<td>
+							<input id="hours4" name="hours" size="15" class="right">
+						</td>
+						<td>
+							<input id="rate4" name="rate" size="15" class="right">
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label for="Employee6">Employee 6:</label>
+						</td>
+						<td>
+							<input id="hours5" name="hours" size="15" class="right">
+						</td>
+						<td>
+							<input id="rate5" name="rate" size="15" class="right">
+						</td>
+					</tr>
+
+				</table>
+				<p class="bump-space"></p>
+				<input type="button" onclick="process()" value="Calculate totals">
+				<input type="reset" value="Clear form" onClick="window.location.reload();">
+				<p class="bump-space"></p>
+
+
+				<table id="output">
+					<tr>
+						<th>Employee</th>
+						<th>Hours Worked</th>
+						<th>Hourly Rate</th>
+						<th>Gross Pay</th>
+					</tr>
+
+
+					<tr>
+						<td>Employee&nbsp;1</td>
+						<td>
+							<input type="text" id="hoursOut0" name="hoursOut" size="15">
+						</td>
+						<td>
+							<input type="text" id="rateOut0" name="rateOut" size="15">
+						</td>
+
+						<td>
+							<input type="text" id="calGross0" name="calGross" size="15">
+						</td>
+					</tr>
+
+					<tr>
+						<td>Employee&nbsp;2</td>
+						<td>
+							<input type="text" id="hoursOut1" name="hoursOut" size="15">
+						</td>
+						<td>
+							<input type="text" id="rateOut1" name="rateOut" size="15">
+						</td>
+
+						<td>
+							<input type="text" id="calGross1" name="calGross" size="15">
+						</td>
+					</tr>
+					<tr>
+						<td>Employee&nbsp;3</td>
+						<td>
+							<input type="text" id="hoursOut2" name="hoursOut" size="15">
+						</td>
+						<td>
+							<input type="text" id="rateOut2" name="rateOut" size="15">
+						</td>
+
+						<td>
+							<input type="text" id="calGross2" name="calGross" size="15">
+						</td>
+					</tr>
+					<tr>
+						<td>Employee&nbsp;4</td>
+						<td>
+							<input type="text" id="hoursOut3" name="hoursOut" size="15">
+						</td>
+						<td>
+							<input type="text" id="rateOut3" name="rateOut" size="15">
+						</td>
+
+						<td>
+							<input type="text" id="calGross3" name="calGross" size="15">
+						</td>
+					</tr>
+					<tr>
+						<td>Employee&nbsp;5</td>
+						<td>
+							<input type="text" id="hoursOut4" name="hoursOut" size="15">
+						</td>
+						<td>
+							<input type="text" id="rateOut4" name="rateOut" size="15">
+						</td>
+
+						<td>
+							<input type="text" id="calGross4" name="calGross" size="15">
+						</td>
+					</tr>
+					<tr>
+						<td>Employee&nbsp;6</td>
+						<td>
+							<input type="text" id="hoursOut5" name="hoursOut" size="15">
+						</td>
+						<td>
+							<input type="text" id="rateOut5" name="rateOut" size="15">
+						</td>
+
+						<td>
+							<input type="text" id="calGross5" name="calGross" size="15">
+						</td>
+					</tr>
+
+				</table>
+
+
+			</form>
+
+		</section>
+
+	</div>
+	<script src="js/assign4-pt2.js"></script>
+	<script src="js/validate-jq.js"></script>
+
+</body>
+
+</html>
