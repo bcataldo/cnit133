@@ -4,6 +4,10 @@
 			font-weight: 200;
 		}
 		
+		.img-size {
+			width: 150px;
+			height: 150px;
+		}
 		
 		#panel,
 		#flip {
@@ -29,6 +33,6 @@
 		
 		#draggable {
 			width: 150px;
-			height: 150px;
-			background-color: lightyellow;
+			height: 178px;
+			background-color: lightgoldenrodyellow;
 		}
