@@ -1,0 +1,110 @@
+		.jumbotron p {
+			margin-bottom: 15px;
+			font-size: 14px;
+			font-weight: 200;
+		}
+		
+		table {
+			width: 450px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: left;
+			border: 1px solid black;
+			font-size: 12px;
+		
+		}
+		
+		table td {
+			text-align: left;
+			padding: 8px 8px;
+			vertical-align: text-bottom;
+		}
+		
+		 input[type="radio"] {
+			text-align: left;
+			vertical-align: text-bottom;
+			font-size: 11px;
+			margin-right: 5px;
+		}
+
+ input[type="checkbox"] {
+			text-align: left;
+			vertical-align: text-bottom;
+			font-size: 11px;
+			margin-right: 7px;
+		}
+		
+		table th {
+			text-align: left;
+			vertical-align: text-bottom;
+			padding-left: 20px;
+			width: 16px;
+			font-size: 15px;
+		}
+		
+		.column-width {
+			width: 70px;
+		}
+		
+		.left {
+			text-align: left;
+		}
+		
+		.right {
+			text-align: right;
+		}
+		
+		.center {
+			text-align: center;
+		}
+		
+		.bold {
+			font-weight: bold;
+		}
+		
+		.bump-space {
+			padding-top: 20px;
+		}
+
+.bump-space1 {
+	margin-left: 20px;
+}
+		
+		.label {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 15px;
+			line-height: 1.42857143;
+			color: #333;
+			font-weight: bold;
+			text-align: right;
+			padding: 13px;
+		}
+
+/*		this is for the error message on 5a1*/
+
+		.error {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 11px;
+			line-height: 1.42857143;
+			color: #ff0000;
+			font-weight: normal;
+			padding-left: 6px;
+		}
+		
+		#panel,
+		#flip {
+			padding: 5px;
+			text-align: center;
+			background-color: #c0c0c0;
+			width: 450px;
+			border: solid 1px #c3c3c3;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		
+		#panel {
+			padding: 10px;
+			width: 450px;
+			display: none;
+			text-align: left;
+		}

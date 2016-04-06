@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Homework for the CNIT 133 Spring 2016 class">
+	<meta name="author" content="Beth Cataldo">
+	<link rel="icon" href="images/favicon.ico">
+
+	<title>Assignment 5, Part 1B: Navigating Drop Down Choices with Arrays</title>
+
+	<!-- Link to JQuery Styles -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+	<!-- Link to JQuery UI and codes -->
+
+	<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+	<!-- Link to JQuery Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!-- Link to local Javascript file -->
+
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+	<link href="css/exercise5a1.css" rel="stylesheet">
+
+
+	<!-- This link needs to be here for the tool tip to work -->
+
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<!-- This link needs to be here for the validation work -->
+
+
+
+
+</head>
+
+<body>
+
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation" class="active"><a href="index.html">Beth Cataldo</a></li>
+					<li role="presentation"><a href="index.html">HW #1</a></li>
+					<li role="presentation"><a href="hw2.html">HW #2</a></li>
+					<li role="presentation"><a href="hw3.html">HW #3</a></li>
+					<li role="presentation"><a href="hw4.html">HW #4</a></li>
+					<li role="presentation" class="active"><a href="hw5.html">HW #5</a></li>
+					<li role="presentation"><a href="hw6.html">HW #6</a></li>
+					<li role="presentation"><a href="hw7.html">HW #7</a></li>
+					<li role="presentation"><a href="hw8.html">HW #8</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<section class="jumbotron">
+			<h2>Homework #5: Arrays and Form DropDowns</h2>
+			<h3>Part 1B: Navigating Drop Down Choices</h3>
+			<div id="flip">Click to Show/Hide Instructions</div>
+			<div id="panel">
+				<br />Part 1B: Create a 2nd webpage that contains a script that utilizes 2 pulldown menus. The first one should utilize an onchange event handler. The second should utilize a button with an onclick event handler to navigate to a page after an option is selected. Each pulldown menu should include at least 3 URL destinations. You could put the link for Part B at the bottom of the Part A page or simply have 2 links (Part A and Part B) on the cover page.
+				<br /> 
+			</div>
+
+			<form name="myForm1">
+<h5 class="bump-space">Choose your favorite news website (using onChange event handler)</h5>
+
+<select name="newsSite1" onChange="goToFavoriteSite(this.form);">
+<option>Choose Destination:</option>
+<option value="http://www.sfgate.com/">SF Gate</option>
+<option value="http://www.msnbc.com/">MSNBC</option>
+<option value="http://www.nytimes.com/">The New York Times</option>
+<option value="http://www.huffingtonpost.com/">Huffington Post</option>
+</select>
+
+</form>
+
+<br><br>
+
+<form name="myForm2">
+<h5>Choose your favorite news web site (using onClick event handler)</h5>
+<select name="newsSite2">
+<option value="http://www.sfgate.com/">SF Gate</option>
+<option value="http://www.msnbc.com/">MSNBC</option>
+<option value="http://www.nytimes.com/">The New York Times</option>
+<option value="http://www.huffingtonpost.com/">Huffington Post</option>
+</select>
+
+<input type="button" value="Go" onClick="goToFavoriteSite2(this.form);">
+
+</form>
+		</section>
+
+	</div>
+	<script src="js/assign5-pt1b.js"></script>
+	<script src="js/validate-jq.js"></script>
+
+</body>
+
+</html>

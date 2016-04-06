@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Homework for the CNIT 133 Spring 2016 class">
+	<meta name="author" content="Beth Cataldo">
+	<link rel="icon" href="images/favicon.ico">
+
+	<title>Assignment 5, Part 3: Using Arrays to Determine Salary Ranges</title>
+
+	<!-- Link to JQuery Styles -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+	<!-- Link to JQuery UI and codes -->
+
+	<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+	<!-- Link to JQuery Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!-- Link to local Javascript file -->
+
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+	<link href="css/exercise5c.css" rel="stylesheet">
+
+
+	<!-- This link needs to be here for the tool tip to work -->
+
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<!-- This link needs to be here for the validation work -->
+
+
+
+
+</head>
+
+<body onload="start()">
+
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation" class="active"><a href="index.html">Beth Cataldo</a></li>
+					<li role="presentation"><a href="index.html">HW #1</a></li>
+					<li role="presentation"><a href="hw2.html">HW #2</a></li>
+					<li role="presentation"><a href="hw3.html">HW #3</a></li>
+					<li role="presentation"><a href="hw4.html">HW #4</a></li>
+					<li role="presentation" class="active"><a href="hw5.html">HW #5</a></li>
+					<li role="presentation"><a href="hw6.html">HW #6</a></li>
+					<li role="presentation"><a href="hw7.html">HW #7</a></li>
+					<li role="presentation"><a href="hw8.html">HW #8</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<section class="jumbotron">
+			<h2>Homework #5: Arrays and Form DropDowns</h2>
+			<h3>Part 3: Using Arrays to Determine Salary Ranges</h3>
+			<div id="flip">Click to Show/Hide Instructions</div>
+			<div id="panel">
+				<br />Use a one-dimensional array to solve the following problem:
+				<br/> A company pays its salespeople on a commission basis. The salespeople receive $200.00 per week plus 9% of their gross sales for that week. For example, a sales person who grosses $5000.00 in sales in a week receives $200.00 plus 9% of $5000.00, or a total of $650.00.
+				<br/> Create a webpage with a script (using an array of counters) that obtains the gross sales for each employee through a form and determines how many of the salespeople earned salaries in a range of numbers.
+				<br />
+			</div>
+
+			<h4 class="bump-space">Salaries</h4>
+			<p> Salespeople receive $200 a week plus 9 percent of the gross sales for that week. Through this form, we input the employees' salaries and then determine and output how many of the salespeople earned salaries in certain ranges.</p>
+
+			<form name="myForm">
+				<table>
+					<tr>
+						<td colspan="2">Enter gross sales: 
+							<input type="text" id="newSales">
+						</td>
+					</tr>
+					<tr>
+						<td class="column-width">
+							<input type="button" value="Calculate" onclick="addEntry()">
+						</td>
+						<td>
+							<input type="reset" value="Reset" onclick="window.location.reload();">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">Base Salary:
+						<input type="text" value="$200"></td>
+				
+					</tr>
+					<tr>
+						<td colspan="2"><br> Total Salary:
+						<input type="text" id="salesBonus">
+						</td>
+					</tr>
+					<tr><td colspan="2">
+						<textarea id="output" rows="15" cols="40"></textarea></td>
+					</tr>
+
+				</table>
+			</form>
+
+
+		</section>
+
+	</div>
+	<script src="js/assign5-pt3.js"></script>
+	<script src="js/validate-jq.js"></script>
+
+</body>
+
+</html>

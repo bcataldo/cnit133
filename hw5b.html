@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Homework for the CNIT 133 Spring 2016 class">
+	<meta name="author" content="Beth Cataldo">
+	<link rel="icon" href="images/favicon.ico">
+
+	<title>Assignment 5, Part 2: Displaying Census Information</title>
+
+	<!-- Link to JQuery Styles -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+	<!-- Link to JQuery UI and codes -->
+
+	<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+	<!-- Link to JQuery Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!-- Link to local Javascript file -->
+
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+	<link href="css/exercise5b.css" rel="stylesheet">
+
+
+	<!-- This link needs to be here for the tool tip to work -->
+
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<!-- This link needs to be here for the validation work -->
+
+
+
+
+</head>
+
+<body>
+
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation" class="active"><a href="index.html">Beth Cataldo</a></li>
+					<li role="presentation"><a href="index.html">HW #1</a></li>
+					<li role="presentation"><a href="hw2.html">HW #2</a></li>
+					<li role="presentation"><a href="hw3.html">HW #3</a></li>
+					<li role="presentation"><a href="hw4.html">HW #4</a></li>
+					<li role="presentation" class="active"><a href="hw5.html">HW #5</a></li>
+					<li role="presentation"><a href="hw6.html">HW #6</a></li>
+					<li role="presentation"><a href="hw7.html">HW #7</a></li>
+					<li role="presentation"><a href="hw8.html">HW #8</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<section class="jumbotron">
+			<h2>Homework #5: Arrays and Form DropDowns</h2>
+			<h3>Part 2: Displaying Census Information</h3>
+			<div id="flip">Click to Show/Hide Instructions</div>
+			<div id="panel">
+				<br />Given the following table of data about several of our states from the 2010 census, create a webpage that enables the user to enter a state name (full or abbreviated) and have the State Name, State Capital, and population appear in separate form text fields of the page. The user should be able to start the script by pressing the button, "State Info".<br />
+				Just use the states that are given in the following table for your array. Allow for the user to enter state info in either lower case or upper case letters. Note that solving this problem involves a two-dimensional array. Make sure you validate the input for a correct state abbreviation or state name. If the input is invalid then display an error message. Utilize jQuery UI for a button that will be used to display the instruction: "Enter a state abbreviation or name (lower or upper case is ok)". 
+				<br />
+			</div>
+
+			<h4 class="bump-space">US Census Information 2010</h4>
+	
+
+			<table>
+				<tr>
+					<th>State</th>
+					<th>State Name</th>
+					<th>Capital</th>
+					<th>Population</th>
+				</tr>
+				<tr>
+					<td>AL</td> <td>Alabama</td> <td>Montgomery</td> <td class="right">4,779,736</td>
+
+				</tr>
+
+
+				<tr>
+					<td>AK</td>
+					<td>Alaska</td>
+					<td>Juneau</td>
+					<td class="right">710,231</td>
+
+				</tr>
+
+
+				<tr>
+					<td>AZ</td>
+					<td>Arizona</td>
+					<td>Phoenix</td>
+					<td class="right">6,392,017</td>
+				</tr>
+
+				<tr>
+					<td>AR</td>
+					<td>Arkansas</td>
+					<td>Little Rock</td>
+					<td class="right">2,915,918</td>
+				</tr>
+				<tr>
+					<td>CA</td>
+					<td>California</td>
+					<td>Sacramento</td>
+					<td class="right">37,253,956</td>
+				</tr>
+				<tr>
+					<td>CO</td>
+					<td>Colorado</td>
+					<td>Denver</td>
+					<td class="right">5,029,196</td>
+				</tr>
+			</table>
+			<br>
+			<button id="opener">Click for instructions</button>
+
+	<div id="dialog" title="Instructions">
+	<p class="label">Enter a state abbreviation or name<br />(lower or upper case is ok)</p>
+			</div>
+			<form name="SearchForm" class="bump-space">
+
+
+				<input type="text" size="25" name="stateName" autofocus>
+
+				<input onclick="censusInfo();" type="button" value="State Info" name="search" id="search">
+
+				<br>
+				<br> Name of State
+
+				<br>
+
+				<input type="text" size="25" name="name" id="name">
+				<br>
+				<br> Capital of State
+
+				<br>
+
+				<input type="text" size="25" name="capital" id="capital">
+				<br>
+				<br> Population
+
+
+				<br>
+				<input type="text" size="25" name="population" id="population">
+				
+				<br/><br/><br/> Comment
+
+
+				<br>
+				<input type="text" size="40" name="comment" id="comment">
+				<br>
+				<br>
+
+				<input type="reset" value="Reset" onclick="location.reload();">
+
+
+			</form>
+
+
+		</section>
+
+	</div>
+	<script src="js/assign5-pt2.js"></script>
+	<script src="js/validate-jq.js"></script>
+
+</body>
+
+</html>

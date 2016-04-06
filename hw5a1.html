@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Homework for the CNIT 133 Spring 2016 class">
+	<meta name="author" content="Beth Cataldo">
+	<link rel="icon" href="images/favicon.ico">
+
+	<title>Assignment 5, Part 1A: Validating Form Fields</title>
+
+	<!-- Link to JQuery Styles -->
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+	<!-- Link to JQuery UI and codes -->
+
+	<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+	<!-- Link to JQuery Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!-- Link to local Javascript file -->
+
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+	<link href="css/exercise5a1.css" rel="stylesheet">
+
+
+	<!-- This link needs to be here for the tool tip to work -->
+
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<!-- This link needs to be here for the validation work -->
+
+
+
+
+</head>
+
+<body>
+
+	<div class="container">
+		<header class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills">
+					<li role="presentation" class="active"><a href="index.html">Beth Cataldo</a></li>
+					<li role="presentation"><a href="index.html">HW #1</a></li>
+					<li role="presentation"><a href="hw2.html">HW #2</a></li>
+					<li role="presentation"><a href="hw3.html">HW #3</a></li>
+					<li role="presentation"><a href="hw4.html">HW #4</a></li>
+					<li role="presentation" class="active"><a href="hw5.html">HW #5</a></li>
+					<li role="presentation"><a href="hw6.html">HW #6</a></li>
+					<li role="presentation"><a href="hw7.html">HW #7</a></li>
+					<li role="presentation"><a href="hw8.html">HW #8</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<section class="jumbotron">
+			<h2>Homework #5: Arrays and Form DropDowns</h2>
+			<h3>Part 1: Validating Form Fields</h3>
+			<div id="flip">Click to Show/Hide Instructions</div>
+			<div id="panel">
+				<br />Part 1A: Create a webpage containing a form that displays an input text box, radio buttons, checkboxes, and select items; along with a script that executes form validation. Your script should validate whether the user has entered data in the input text box, has checked a radio button, has checked at least one checkbox, and has selected an option from the select items. Use a submit button to invoke the validation script, so that the form is processed only when the form fields are valid. If a field is invalid then display a message to the user.
+				<br /> In your form statement, use method="post" and an action that can be a mailto or a webpage (displaying that the form has been processed), but be sure to use input type="submit" for your submit button. Alternatively you can leave out the form's action and method, but then you should use an input type="button", along with displaying any appropriate messages.
+				<br />
+			</div>
+<h4 class="bump-space">Please tell us about your favorite things.</h4>
+			<form id="myform" action="mailto:bcataldo@gmail.com" method="post" enctype="text/plain" name="myform" >
+				<table>
+					<tr>
+
+						<th>Your City:</th>
+						<td>
+							<input type="text" name="city" id="city" size="20" class="required" autofocus>
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<th>Your Bird:</th>
+
+						<td>American Robin
+							<input type="radio" id="bird1" name="bird" class="required" value="American Robin">
+							Scrub Jay
+							<input type="radio" id="bird2"  name="bird" value="Scrub Jay">
+							Hummingbird
+							<input type="radio" id="bird3"  name="bird" value="Scrub Jay">
+						</td>
+					</tr>
+
+
+					<tr>
+
+						<th>Your Food:</th>
+
+						<td>Thai
+							<input type="checkbox" id="food1" name="food" value="Thai" class="required">
+							 Indian
+
+							<input type="checkbox" id="food2"  name="food" value="Indian">
+							Chinese
+
+							<input type="checkbox" id="food3"  name="food" value="Indian">
+							Vegan Cuisine 
+
+							<input type="checkbox" id="food4"  name="food" value="Indian">
+						</td>
+
+					</tr>
+
+
+
+					<tr>
+
+						<td>
+						<label for="season" class="label">Your Season:</label>
+						</td>
+						<td>
+							<select name="season" id="season" class="required">
+								<option value="">-Choose one-</option>
+								<option value="spring">Spring</option>
+								<option value="summer">Summer</option>
+								<option value="fall">Fall</option>
+								<option value="winter">winter</option>
+							</select>
+						</td>
+
+					</tr>
+
+
+					<tr>
+
+						<td class="bump-space">
+							<input type="submit" id="submit_button" value="Submit"  class="bump-space1">
+						</td>
+
+						<td>
+							<input type="reset" value="Clear Form" onclick="window.location.reload();">
+						</td>
+
+					</tr>
+
+
+				</table>
+
+
+			</form>
+
+		</section>
+
+	</div>
+	<script src="js/assign5-pt1a.js"></script>
+	<script src="js/validate-jq.js"></script>
+
+</body>
+
+</html>
